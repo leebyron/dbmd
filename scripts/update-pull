@@ -18,6 +18,7 @@ if [ "$(whoami)" != "root" ]; then
   exit $?
 fi
 cd "$(dirname "$0")"
+cd ..
 sudo -Hu www-data git pull origin master || exit $?
 if [ "$2" != "" ]; then
   sudo -Hu www-data git checkout "$2" || exit $?
