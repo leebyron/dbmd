@@ -29,7 +29,7 @@ GROUP=www-data
 # Node.js
 NODE_PROGRAM=/usr/local/bin/node
 NODE_SCRIPT=/var/dbmd/bin/dbmd.js
-NODE_ARGS="$NODE_PROGRAM"
+NODE_ARGS="$NODE_SCRIPT"
 
 # Daemon supervisor config
 SUPERVISOR=/usr/bin/daemon
