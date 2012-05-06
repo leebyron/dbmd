@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Usage: update [restart|noop [<refspec>]]
+#
+# Examples:
+#   update                 # deploy latest
+#   update restart         # deploy latest and restart services
+#   update restart v1.2.3  # deploy ref "v1.2.3" and restart services
+#   update noop v1.2.3     # deploy ref "v1.2.3"
+#
+# If <refspec> is not given, no "git checkout" is performed thus you get the
+# latest version of whatever branch you are currently at.
+#
+ssh -i ~/.ssh/aws-dbmd.pem ubuntu@ec2-204-236-150-245.us-west-1.compute.amazonaws.com "/var/dbmd/update-srvr $@"
