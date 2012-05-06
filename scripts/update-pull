@@ -1,12 +1,14 @@
 #!/bin/bash
 #
-# Usage: update [restart|noop [<refspec>]]
+# Usage: update-pull [restart|noop [<refspec>]]
+#
+# Very likely to be called over ssh by the "update" script
 #
 # Examples:
-#   update-srvr                 # deploy latest
-#   update-srvr restart         # deploy latest and restart services
-#   update-srvr restart v1.2.3  # deploy ref "v1.2.3" and restart services
-#   update-srvr noop v1.2.3     # deploy ref "v1.2.3"
+#   update-pull                 # deploy latest
+#   update-pull restart         # deploy latest and restart services
+#   update-pull restart v1.2.3  # deploy ref "v1.2.3" and restart services
+#   update-pull noop v1.2.3     # deploy ref "v1.2.3"
 #
 # If <refspec> is not given, no "git checkout" is performed thus you get the
 # latest version of whatever branch you are currently at.

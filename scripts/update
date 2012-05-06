@@ -11,4 +11,4 @@
 # If <refspec> is not given, no "git checkout" is performed thus you get the
 # latest version of whatever branch you are currently at.
 #
-ssh -i ~/.ssh/aws-dbmd.pem ubuntu@ec2-204-236-150-245.us-west-1.compute.amazonaws.com "/var/dbmd/update-srvr $@"
+ssh -i ~/.ssh/aws-dbmd.pem ubuntu@ec2-204-236-150-245.us-west-1.compute.amazonaws.com "/var/dbmd/scripts/update-pull $@"
