@@ -1,14 +1,16 @@
+#!/usr/bin/env node
+
 var dbox = require('dbox');
 var s3 = require('s3');
 
-var DBMDServer = require('./lib/DBMDServer.js');
-var DropboxWatcher = require('./lib/DropboxWatcher.js');
-var MarkdownCache = require('./lib/MarkdownCache.js');
-var MoustacheCache = require('./lib/MoustacheCache.js');
-var S3Cache = require('./lib/S3Cache.js');
-var URLResolver = require('./lib/URLResolver.js')
+var DBMDServer = require('../lib/DBMDServer.js');
+var DropboxWatcher = require('../lib/DropboxWatcher.js');
+var MarkdownCache = require('../lib/MarkdownCache.js');
+var MoustacheCache = require('../lib/MoustacheCache.js');
+var S3Cache = require('../lib/S3Cache.js');
+var URLResolver = require('../lib/URLResolver.js')
 
-var settings = require('./settings.json');
+var settings = require('../settings.json');
 
 var db_app = dbox.app(settings.dropbox_app_token);
 var db_client = db_app.createClient(settings.dropbox_access_token);
@@ -29,6 +31,6 @@ var server = new DBMDServer(
   settings
 );
 
-var port = process.argv[2];
+var port = process.argv[2] || 1337;
 server.listen(port);
 dropbox_watcher.updateNow();
