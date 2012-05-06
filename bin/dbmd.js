@@ -31,6 +31,5 @@ var server = new DBMDServer(
   settings
 );
 
-var port = process.argv[2] || 1337;
-server.listen(port);
+server.listen(1337);
 dropbox_watcher.updateNow();
