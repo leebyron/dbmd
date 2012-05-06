@@ -5,7 +5,7 @@ Yet another dropbox hosted CMS where individual pages are markdown files.
 
 First run the access token script.
 
-    > get-access-token.js
+    > ./bin/get-access-token.js
 
 This will spit out a url to open, open it, accept the permissions dialog, then
 hit enter in the console. It will give you a bunch of tokens. Copy those into
@@ -32,3 +32,14 @@ Markdown files have a header with some custom information:
     Permalink: page-title alt-title deep/title
     Synopsis: syposis.markdown
     Tags: awesome silly fun
+
+Deploying is based on Rasmus's awesome template:
+https://github.com/rsms/ec2-webapp/blob/master/INSTALL.md#readme
+
+To deploy:
+
+hack hack hack
+> git add .
+> git commit -m 'Message'
+> git push
+> ./scripts/update restart
