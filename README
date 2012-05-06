@@ -1,0 +1,34 @@
+dbmd
+----
+
+Yet another dropbox hosted CMS where individual pages are markdown files.
+
+First run the access token script.
+
+    > get-access-token.js
+
+This will spit out a url to open, open it, accept the permissions dialog, then
+hit enter in the console. It will give you a bunch of tokens. Copy those into
+settings.json.
+
+You'll get a directory in your dropbox at `Dropbox/Apps/markdown/`
+
+Put drafts files in `./drafts`
+
+If you want to force a reload of your changes in dropbox (perhaps to preview a
+file you're working on), then pass ?force=1 in the URL.
+
+If you want to see *all* (time based) pages, pass ?showall=1 to the index page.
+You will have to enter your user/pass to be able to do this.
+
+Markdown files have a header with some custom information:
+
+    Title: Page's Title
+    Author: Custom Author
+    Date: Jan 1st, 2001 3:45pm
+    Raw: true
+    CSS: custom_style.css
+    Template: custom_template.mustache
+    Permalink: page-title alt-title deep/title
+    Synopsis: syposis.markdown
+    Tags: awesome silly fun
