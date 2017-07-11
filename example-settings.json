@@ -1,0 +1,37 @@
+{
+  "dropbox_app_token": {
+    "app_key": "your key here",
+    "app_secret": "your secret here"
+  },
+
+  "dropbox_access_token": {
+    "oauth_token": "your token here",
+    "oauth_token_secret": "your secret here",
+    "uid": "your uid"
+  },
+
+  "s3_token": {
+    "key": "your key here",
+    "secret": "your secret here",
+    "bucket": "your bucket here"
+  },
+
+  "draft_credentials": {
+    "username": "your username here",
+    "password": "your password here"
+  },
+
+  "index_og_tags": {
+    "title": "Lee Byron",
+    "description": "I make things, write words, and explain data.",
+    "type": "profile",
+    "profile": {
+      "first_name": "Lee",
+      "last_name": "Byron",
+      "username": "leebyron"
+    }
+  },
+
+  "index_template": "/static/index.mustache",
+  "page_template": "/static/page.mustache"
+}
